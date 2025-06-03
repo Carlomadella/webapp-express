@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // definisco il numero di porta su cui il server deve rimanere in ascolto
-const port = 3000;
+const port = process.env.SERVER_PORT || 3000;
 
 // uso il middleware per gli asset statici
 app.use(express.static('public'));
